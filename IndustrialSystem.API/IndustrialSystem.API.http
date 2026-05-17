@@ -1,0 +1,6 @@
+@IndustrialSystem.API_HostAddress = http://localhost:5069
+
+GET {{IndustrialSystem.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

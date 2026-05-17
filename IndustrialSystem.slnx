@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="IndustrialSystem.API/IndustrialSystem.API.csproj" />
+  <Project Path="IndustrialSystem.Core/IndustrialSystem.Core.csproj" />
+  <Project Path="IndustrialSystem.Infrastructure/IndustrialSystem.Infrastructure.csproj" />
+</Solution>
