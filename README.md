@@ -45,10 +45,10 @@ IndustrialSystem
 - **.NET 8**
 - **ASP.NET Core Web API**
 - **Entity Framework Core**
-- **SQL Server / SQLite** (depending on your config)
+- **SQL Server**
 - **FluentValidation**
 - **Dependency Injection**
-- **GitHub Actions (optional CI)**
+- **GitHub Actions**
 
 ---
 
