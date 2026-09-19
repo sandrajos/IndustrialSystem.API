@@ -20,7 +20,9 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore IndustrialSystem.slnx
+        run: |
+          dotnet restore IndustrialSystem.slnx
+          dotnet restore tests/IndustrialSystem.Tests/IndustrialSystem.Tests.csproj
 
       - name: Build
         run: dotnet build IndustrialSystem.slnx --configuration Release --no-restore
