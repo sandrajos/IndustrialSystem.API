@@ -94,4 +94,28 @@ public class WorkOrdersControllerTests
         Assert.Equal(nameof(WorkOrdersController.GetById), createdResult.ActionName);
         Assert.Equal(1, createdResult.RouteValues!["id"]);
     }
+
+    [Fact]
+    public async Task Update_ReturnsNoContent_WhenUpdateSucceeds()
+    {
+        var mockService = new Mock<IWorkOrderService>();
+
+        var input = new UpdateWorkOrderDto
+        {
+            Title = "Updated Work Order",
+            Description = "Updated description",
+            Progress = 75,
+            Status = "In Progress"
+        };
+
+        mockService
+            .Setup(service => service.UpdateAsync(1, input))
+            .ReturnsAsync(true);
+
+        var controller = new WorkOrdersController(mockService.Object);
+
+        var result = await controller.Update(1, input);
+
+        Assert.IsType<NoContentResult>(result);
+    }
 }
