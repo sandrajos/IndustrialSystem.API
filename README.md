@@ -1,4 +1,5 @@
 # IndustrialSystem API
+[![.NET CI](https://github.com/sandrajos/IndustrialSystem.API/actions/workflows/main.yml/badge.svg)](https://github.com/sandrajos/IndustrialSystem.API/actions/workflows/main.yml)
 
 A modular .NET 8 backend for managing industrial work orders, built with ASP.NET Core, Entity Framework Core, SQL Server, and a layered architecture.
 
