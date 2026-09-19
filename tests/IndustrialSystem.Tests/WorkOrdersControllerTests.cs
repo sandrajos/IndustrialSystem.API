@@ -118,4 +118,20 @@ public class WorkOrdersControllerTests
 
         Assert.IsType<NoContentResult>(result);
     }
+
+    [Fact]
+    public async Task Delete_ReturnsNotFound_WhenWorkOrderDoesNotExist()
+    {
+        var mockService = new Mock<IWorkOrderService>();
+
+        mockService
+            .Setup(service => service.DeleteAsync(999))
+            .ReturnsAsync(false);
+
+        var controller = new WorkOrdersController(mockService.Object);
+
+        var result = await controller.Delete(999);
+
+        Assert.IsType<NotFoundResult>(result);
+    }
 }
